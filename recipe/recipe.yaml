@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/suds-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/suds-${{ version }}.tar.gz
   sha256: 1d5cfa74117193b244a4233f246c483d9f41198b448c5f14a8bad11c4f649f2b
 
 build:
@@ -46,4 +46,3 @@ about:
 extra:
   recipe-maintainers:
     - chrisburr
-
