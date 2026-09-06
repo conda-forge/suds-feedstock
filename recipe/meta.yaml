@@ -16,14 +16,14 @@ build:
   # This will change in in the 2.0.0 release
   # https://github.com/suds-community/suds/blob/a616d96b070ca119a532ff395d4a2a2ba42b257c/README.md#overview
   script: SUDS_PACKAGE=suds {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/suds-community/suds
